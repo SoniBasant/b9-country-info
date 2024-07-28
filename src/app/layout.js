@@ -1,10 +1,13 @@
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
+
 // font awesome style
 import '@fortawesome/fontawesome-svg-core/styles.css';
-// fontawesome file
+
+// fontawesome library provided by react
 import './lib/fontawesome';
-// configuration of font awesome
+
+// import configuration of font awesome to modify configuration settings
 import { config } from '@fortawesome/fontawesome-svg-core';
 
 // Prevent Font Awesome from adding its CSS automatically
