@@ -24,6 +24,7 @@ module.exports = {
   WhiteDarkModeTextnLightModeElements: 'hsl(0, 0%, 100%)',
         Grey: 'hsl(231, 7%, 60%)',
         White: 'hsl(0, 0%, 100%)',
+        red: 'hsl(0, 97%, 50%)',
       },
       fontFamily: {
         sans: ['Nunito Sans', 'sans-serif']

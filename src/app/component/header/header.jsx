@@ -4,7 +4,7 @@ import ThemeBtn from '../button/themeBtn'
 export default function Header() {
   return(
     <header className={headerStyle.headerContainer}>
-      <p className="text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText">
+      <p className="text-WhiteDarkModeTextnLightModeElements font-bold dark:text-VeryDarkBlueLightModeText">
         Where in the world?
       </p>
       <div className={headerStyle.themeContainer}>

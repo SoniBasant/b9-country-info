@@ -8,12 +8,13 @@ export default function SearchBtn() {
     <>
       <FontAwesomeIcon 
         icon={faMagnifyingGlass} 
-        style={styleSearchBtn.searchIconSolid}
+        className={styleSearchBtn.searchIconSolid}
+        // className='text-baseSize dark:text-Grey text-red '
       />
     </>
   )
 }
 
 const styleSearchBtn= {
-  searchIconSolid: 'text-baseSize text-DarkGrayLightModeInput'
+  searchIconSolid: 'text-baseSize text-WhiteDarkModeTextnLightModeElements dark:text-Grey'
 }

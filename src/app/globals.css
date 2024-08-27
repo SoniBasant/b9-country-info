@@ -12,6 +12,7 @@
   --Dark-Gray-LightMode-Input: hsl(0, 0%, 52%);
   --Very-Light-Gray-LightMode-Background: hsl(0, 0%, 98%);
   --White-DarkMode-Text-n-LightMode-Elements: hsl(0, 0%, 100%);
+  /* --red: hsl(0, 97%, 50%); */
 }
 
 @media (prefers-color-scheme: dark) {

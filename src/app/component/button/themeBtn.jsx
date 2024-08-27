@@ -1,41 +1,51 @@
 "use client"
-import { useState, useEffect } from 'react';
-
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleTheme } from '@/redux/slices/themeSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon as faSolidMoon } from '@fortawesome/free-solid-svg-icons';
 import { faMoon as faRegularMoon } from '@fortawesome/free-regular-svg-icons';
 
 
 export default function ThemeBtn() {
-	const [showIcon, setShowIcon] = useState(false);
+	// Access the current theme from Redux state
+	const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
+	// Get the dispatch function from Redux
+	const dispatch = useDispatch();
 
 	useEffect(() => {
-		if (showIcon) {
+		if (isDarkMode) {
 			document.documentElement.classList.add('dark');
 		} else {
 			document.documentElement.classList.remove('dark');
 		}
-	}, [showIcon]);
+	}, [isDarkMode]);
 	return (
-		<>
-			{
-				showIcon ? (
+		// <>
+		// 	{
+		// 		isDarkMode ? (
 
-					<FontAwesomeIcon 
-						icon={faRegularMoon} 
-						className={styleThemeBtn.themeIconRegular}
-						onClick={() => setShowIcon(false)}
-					/>
-				) : (
+		// 			<FontAwesomeIcon 
+		// 				icon={faRegularMoon} 
+		// 				className={styleThemeBtn.themeIconRegular}
+		// 				onClick={() => dispatch(toggleTheme())}
+		// 			/>
+		// 		) : (
 
-					<FontAwesomeIcon 
-						icon={ faSolidMoon} 
-						className={styleThemeBtn.themeIconSolid}
-						onClick={() => setShowIcon(true)}
-					/>
-				)
-			}
-		</>
+		// 			<FontAwesomeIcon 
+		// 				icon={ faSolidMoon} 
+		// 				className={styleThemeBtn.themeIconSolid}
+		// 				onClick={() => dispatch(toggleTheme())}
+		// 			/>
+		// 		)
+		// 	}
+		// </>
+		<FontAwesomeIcon
+      icon={isDarkMode ? faRegularMoon : faSolidMoon}
+      className={isDarkMode ? styleThemeBtn.themeIconRegular : styleThemeBtn.themeIconSolid}
+      onClick={() => dispatch(toggleTheme())}
+    />
 	)
 }
 
