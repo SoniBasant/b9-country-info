@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from '../redux/store';
 
 import Header from './component/header/header'
-import Search from './component/searchBar/searchInput'
+import Search from './component/searchBar/searchBar'
 
 export default function Home() {
   return (

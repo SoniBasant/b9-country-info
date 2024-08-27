@@ -1,6 +1,6 @@
 
 import SearchBtn from '../button/searchBtn'
-import SearchInput from '../selectInput/selectInput'
+import SearchInput from '../searchInput/searchInput'
 
 export default function SearchBar() {
   return(
