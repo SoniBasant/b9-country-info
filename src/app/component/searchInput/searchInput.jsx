@@ -13,6 +13,10 @@ export default function SearchInput() {
 
       dark:text-DarkBlueDarkModeElements
       text-WhiteDarkModeTextnLightModeElements
+
+      text-belowSize
+
+      outline-none
        "/>
     </>
   )
