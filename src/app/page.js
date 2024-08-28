@@ -13,11 +13,13 @@ export default function Home() {
     <Provider store={store}>
       <main className="flex min-h-screen flex-col bg-VeryDarkBlueDarkModeBackground dark:bg-VeryLightGrayLightModeBackground">
         <Header />
-        <div className='px-10 py-5 gap-y-8 flex justify-between flex-col sm:flex-row'>
-          <Search />
-          <Dropdown />
+        <div className='px-10 py-5 flex flex-col gap-y-8'>
+          <div className='flex justify-between flex-col gap-y-8 sm:flex-row'>
+            <Search />
+            <Dropdown />
+          </div>
+          <CountriesList />
         </div>
-        <CountriesList />
       </main>
     </Provider>
   );

@@ -28,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: ;
+  overflow-x: hidden;
 
   color: rgb(var(--foreground-rgb));
   
