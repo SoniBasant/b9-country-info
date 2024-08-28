@@ -1,6 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // thunk action to fetch countries
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
@@ -14,6 +13,7 @@ const initialState = {
   countries: [], // Example state
   loading:false,
   error: null,
+  searchTerm: "", //new search term state
   // Add other initial state properties as needed
 };
 
@@ -21,13 +21,13 @@ const initialState = {
 const countrySlice = createSlice({
   name: 'country',
   initialState,
-  // reducers: {
-  //   setCountries(state, action) {
-  //     state.countries = action.payload;
-  //   },
-  // },
+  
   // Add other reducers as needed
-  reducers: {},
+  reducers: {
+    setSearchTerm(state, action) {
+      state.searchTerm = action.payload; //update search term in state
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCountries.pending, (state) => {
@@ -44,8 +44,8 @@ const countrySlice = createSlice({
   },
 });
 
-// Export actions
-// export const { setCountries } = countrySlice.actions;
+// export actions
+export const { setSearchTerm } = countrySlice.actions;
 
 // Export the reducer
 export default countrySlice.reducer;
