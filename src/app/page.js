@@ -6,6 +6,7 @@ import store from '../redux/store';
 import Header from './component/header/header'
 import Search from './component/searchBar/searchBar'
 import Dropdown from './component/dropdown/dropdown'
+import CountriesList from './component/countries/countriesList'
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
           <Search />
           <Dropdown />
         </div>
+        <CountriesList />
       </main>
     </Provider>
   );
-}
+} 
