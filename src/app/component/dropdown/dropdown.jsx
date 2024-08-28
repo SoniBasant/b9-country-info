@@ -1,9 +1,17 @@
 "use client"
 
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { useDispatch } from 'react-redux';
+import { setRegion } from '@/redux/slices/countrySlice';
 
-export default function Example() {
+export default function Dropdown() {
+  const dispatch = useDispatch();
+
+  const handleRegionSelect = (region) => {
+    // dispatch the action with selected region
+    dispatch(setRegion(region));
+  }
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
@@ -18,48 +26,14 @@ export default function Example() {
         className={menuStyle.menuItemsStyle}
       >
         <div className="py-1">
-          <MenuItem>
-            <a
-              href="#"
-              className={menuStyle.menuItemStyle}
-            >
-              Africa
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a
-              href="#"
-              className={menuStyle.menuItemStyle}
-            >
-              America
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a
-              href="#"
-              className={menuStyle.menuItemStyle}
-            >
-              Asia
-            </a>
-          </MenuItem>
-          {/* <form action="#" method="POST"> */}
-            <MenuItem>
-              <a
-                href="#"
-                className={menuStyle.menuItemStyle}
-              >
-                Europe
-              </a>
+          {["Africa", "America", "Asia", "Europe", "Oceania"].map((region) => (
+
+            <MenuItem key={region}>
+              <button onClick={() => handleRegionSelect(region)} className={menuStyle.menuItemStyle}>
+                {region}
+              </button>
             </MenuItem>
-          {/* </form> */}
-          <MenuItem>
-            <a
-              href="#"
-              className={menuStyle.menuItemStyle}
-            >
-              Oceania
-            </a>
-          </MenuItem>
+          ))}
         </div>
       </MenuItems>
     </Menu>
@@ -67,7 +41,7 @@ export default function Example() {
 }
 
 const menuStyle = {
-  menuItemStyle: 'block px-4 py-2 text-belowSize text-VeryLightGrayLightModeBackground dark:text-DarkGrayLightModeInput data-[focus]:bg-gray-100 data-[focus]:text-gray-900',
+  menuItemStyle: 'w-full flex flex-left px-4 py-2 text-belowSize text-VeryLightGrayLightModeBackground dark:text-DarkGrayLightModeInput data-[focus]:bg-gray-100 data-[focus]:text-gray-900',
   menuItemsStyle: "absolute right-0 z-10 mt-1 w-full origin-top-right rounded-md bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in",
   menuButtonStyle: "inline-flex justify-left gap-x-8 rounded-md bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements px-6 py-3 text-belowSize text-VeryLightGrayLightModeBackground dark:text-DarkGrayLightModeInput shadow-sm ring-inset ring-gray-300",
 }

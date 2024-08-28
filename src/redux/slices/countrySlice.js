@@ -13,8 +13,9 @@ const initialState = {
   countries: [], // Example state
   loading:false,
   error: null,
-  searchTerm: "", //new search term state
-  filteredCountries: [], //new state for filtered countries
+  searchTerm: "", // search term state
+  filteredCountries: [], // state for filtered countries using search bar
+  region: '', // state for selected region
   // Add other initial state properties as needed
 };
 
@@ -25,6 +26,7 @@ const countrySlice = createSlice({
   
   // Add other reducers as needed
   reducers: {
+    // for filtering by name using search bar input
     setSearchTerm(state, action) {
       state.searchTerm = action.payload; //update search term in state
 
@@ -32,7 +34,15 @@ const countrySlice = createSlice({
       state.filteredCountries = state.countries.filter((country) => 
         country.name.common.toLowerCase().includes(action.payload.toLowerCase())
       );
-    }
+    },
+
+    // for filtering by region using dropdown input
+    setRegion(state, action) {
+      state.region = action.payload;
+      state.filteredCountries = state.countries.filter((country) => 
+        country.region === action.payload
+      );
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -52,7 +62,7 @@ const countrySlice = createSlice({
 });
 
 // export actions
-export const { setSearchTerm } = countrySlice.actions;
+export const { setSearchTerm, setRegion } = countrySlice.actions;
 
 // Export the reducer
 export default countrySlice.reducer;
