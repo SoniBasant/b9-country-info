@@ -4,8 +4,8 @@ import axios from 'axios';
 // thunk action to fetch countries
 export const fetchCountries = createAsyncThunk('countries/fetchCountries', async () => {
   const response = await axios.get('https://restcountries.com/v3.1/all');
-  // limit the results to 8 countries
-  return response.data.slice(0, 8);
+  // fetch all countries, filter later
+  return response.data;
 })
 
 // Define the initial state
@@ -14,6 +14,7 @@ const initialState = {
   loading:false,
   error: null,
   searchTerm: "", //new search term state
+  filteredCountries: [], //new state for filtered countries
   // Add other initial state properties as needed
 };
 
@@ -26,6 +27,11 @@ const countrySlice = createSlice({
   reducers: {
     setSearchTerm(state, action) {
       state.searchTerm = action.payload; //update search term in state
+
+      // filter countries based on search term
+      state.filteredCountries = state.countries.filter((country) => 
+        country.name.common.toLowerCase().includes(action.payload.toLowerCase())
+      );
     }
   },
   extraReducers: (builder) => {
@@ -36,6 +42,7 @@ const countrySlice = createSlice({
       .addCase(fetchCountries.fulfilled, (state, action) => {
         state.loading = false;
         state.countries = action.payload;
+        state.filteredCountries = action.payload; //initialize filtered countries
       })
       .addCase(fetchCountries.rejected, (state, action) => {
         state.loading = false;

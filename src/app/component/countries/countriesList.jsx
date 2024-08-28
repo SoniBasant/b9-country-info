@@ -5,8 +5,10 @@ import { fetchCountries } from '@/redux/slices/countrySlice';
 
 export default function CountriesList() {
   const dispatch = useDispatch();
-  const { countries, loading, error } = useSelector((state) => state.country);
+  // use 'filteredCountries' from the Redux store instead of 'countries'
+  const { filteredCountries, loading, error } = useSelector((state) => state.country);
 
+  // Fetch countries when the component mounts
   useEffect(() => {
     dispatch(fetchCountries());
   }, [dispatch]);
@@ -16,7 +18,7 @@ export default function CountriesList() {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
-      {countries.map((country) => (
+      {filteredCountries.map((country) => (
         <div key={country.cca3} className="bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText rounded shadow">
           <img src={country.flags.png} alt={`${country.name.common} flag`} className="w-full max-h-40 object-fit rounded-t mb-2" />
           <h2 className="text-xl font-bold mb-2 ml-2">{country.name.common}</h2>
