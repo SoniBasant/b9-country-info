@@ -6,7 +6,7 @@ import store from '../redux/store';
 import Header from './component/header/header'
 import Search from './component/searchBar/searchBar'
 import Dropdown from './component/dropdown/dropdown'
-import CountriesList from './component/countries/countriesList'
+import CountriesList from './component/countriesList/countriesList'
 
 export default function Home() {
   return (
