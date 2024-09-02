@@ -7,17 +7,20 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
 
+import Link from 'next/link';
 
 export default function BackBtn() {
   return (
-    <div className={styleLeftArrow.arrowContainer}>
-    
-      <FontAwesomeIcon 
-          icon={faArrowLeftLong} 
-          className={styleLeftArrow.leftArrow}
-        />
-      <p className={styleLeftArrow.backText}>Back</p>  
-    </div>
+    // back to home page
+    <Link href={`/`}>
+      <div className={styleLeftArrow.arrowContainer}>
+        <FontAwesomeIcon 
+            icon={faArrowLeftLong} 
+            className={styleLeftArrow.leftArrow}
+          />
+        <p className={styleLeftArrow.backText}>Back</p>  
+      </div>
+    </Link>
   )
 }
 
