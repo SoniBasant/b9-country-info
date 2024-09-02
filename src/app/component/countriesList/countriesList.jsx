@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function CountriesList() {
   const dispatch = useDispatch();
-  // use 'filteredCountries' from the Redux store instead of 'countries'
+  // use 'filteredCountries' from the Redux store
   const { filteredCountries, loading, error } = useSelector((state) => state.country);
 
   // Fetch countries when the component mounts
