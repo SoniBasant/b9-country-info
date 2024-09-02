@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCountries } from '@/redux/slices/countrySlice';
 
-import CountryCardHomePage from '../countryCard/ccHomePage';
+import CountryCardHomePage from '../countryCard/countryCardHomePage';
 
 import Link from 'next/link';
 

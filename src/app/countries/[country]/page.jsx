@@ -11,6 +11,8 @@
 
 import axios from 'axios';
 
+import CountryInfoDetailPage from '@/app/component/countryCard/countryInfoDetailPage'
+
 export async function generateStaticParams() {
   const response = await axios.get('https://restcountries.com/v3.1/all');
   const countries = response.data;
@@ -33,12 +35,6 @@ export default async function CountryDetail({ params }) {
   const countryData = await fetchCountryData(country);
 
   return (
-    <div className="p-4">
-      <img src={countryData.flags.png} alt={`${countryData.name.common} flag`} className="w-64 h-40 object-cover" />
-      <h1 className="text-3xl font-bold mt-4">{countryData.name.common}</h1>
-      <p><strong>Population:</strong> {countryData.population.toLocaleString()}</p>
-      <p><strong>Region:</strong> {countryData.region}</p>
-      <p><strong>Capital:</strong> {countryData.capital ? countryData.capital[0] : 'N/A'}</p>
-    </div>
+    <CountryInfoDetailPage countryData={countryData}/>
   );
 }
