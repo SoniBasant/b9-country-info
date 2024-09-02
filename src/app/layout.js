@@ -21,7 +21,10 @@ import Header from './component/header/header'
 import { Provider } from 'react-redux';
 import store from '../redux/store';
 
-const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
+const nunitoSans = Nunito_Sans({ 
+  subsets: ["latin"],
+  weight: ['400', '700'], 
+});
 
 export default function RootLayout({ children }) {
   return (
@@ -30,7 +33,7 @@ export default function RootLayout({ children }) {
       <Provider store={store}>
         <Header />
         {children}
-        </Provider>
+      </Provider>
       </body>
     </html>
   );

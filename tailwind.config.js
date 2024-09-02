@@ -26,9 +26,9 @@ module.exports = {
         White: 'hsl(0, 0%, 100%)',
         red: 'hsl(0, 97%, 50%)',
       },
-      fontFamily: {
-        sans: ['Nunito Sans', 'sans-serif']
-      },
+      // fontFamily: {
+      //   sans: ['Nunito Sans', 'sans-serif']
+      // },
       fontSize: {
         'baseSize': '16px',
         'mediumSize': '14px',
