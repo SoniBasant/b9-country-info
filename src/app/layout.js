@@ -31,8 +31,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={nunitoSans.className}>
       <Provider store={store}>
+      <main className="flex min-h-screen flex-col bg-VeryDarkBlueDarkModeBackground dark:bg-VeryLightGrayLightModeBackground">
         <Header />
         {children}
+      </main>
       </Provider>
       </body>
     </html>
