@@ -30,7 +30,7 @@ export default function NeighborCountryBtn({ cca3 }) {
   
   return (
     <Link key={cca3} href={`/countries/${countryData && countryData.cca3 ? countryData.cca3 : '#'}`}>
-      <button className={neighborCountryStyle.btn}>
+      <button type='button' className={neighborCountryStyle.btn}>
         {countryData && countryData.name ? countryData.name.common : 'Loading...'}
       </button>
     </Link>
@@ -38,5 +38,5 @@ export default function NeighborCountryBtn({ cca3 }) {
 }
 
 const neighborCountryStyle = {
-  btn: 'bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements text-WhiteDarkModeTextnLightModeElements dark:text-Grey px-5 py-2 rounded',
+  btn: 'min-w-2 w-full bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText px-5 py-2 shadow rounded',
 };

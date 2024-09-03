@@ -18,6 +18,6 @@ export default function Header() {
 }
 
 const headerStyle = {
-  headerContainer: 'z-10 py-7 px-4 px-31 w-full flex items-center justify-between flex-row text-sm bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements',
+  headerContainer: 'z-10 py-7 px-4 px-31 w-full flex items-center justify-between flex-row text-sm bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements shadow',
   themeContainer: 'flex flex-row gap-3 items-center'
 }
