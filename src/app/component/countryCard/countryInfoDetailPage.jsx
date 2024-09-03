@@ -19,17 +19,24 @@ export default function CountryInfoDetailPage({ countryData }) {
               <p><strong>Capital:</strong> {countryData.capital ? countryData.capital : 'N/A'}</p>
             </div>
             <div>
-              <p><strong>Top Level Domain:</strong> {countryData.tld}</p>
+              <p><strong>Top Level Domain:</strong> {countryData.tld ? countryData.tld : 'N/A'}</p>
               <p><strong>Currencies:</strong> {countryData.currencies ? Object.values(countryData.currencies)[0].name : 'N/A'}</p>
               <p><strong>Language:</strong> {countryData.languages ? Object.values(countryData.languages).join(", ") : 'N/A'}</p>
             </div>
           </div>
           <>
             <p><strong>Border Countries:</strong></p>
+           
             <div>
-              <NeighborCountryBtn country={countryData}/>
-              <NeighborCountryBtn country={countryData}/>
-              <NeighborCountryBtn country={countryData}/>
+              <p>
+                {countryData.borders?.length > 0 ? (
+                  (countryData.borders).map((cca3) => (
+                    <NeighborCountryBtn key={cca3} cca3={cca3}/>
+                  )) 
+                ) : (
+                  'N/A'
+                  )}
+              </p>
             </div>
           </>
         </div>
