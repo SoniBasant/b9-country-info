@@ -35,7 +35,7 @@ module.exports = {
         'belowSize': '12px',
       },
       boxShadow: {
-        'colorShadow': '0px 5px 9px 6px rgba(255, 98, 87, 0.3)',
+        'colorShadow': '0px 1px 9px 1px rgba(41, 40, 40, 0.2), 0px -1px 9px 1px rgba(41, 40, 40, 0.2)',
       },
       
     },

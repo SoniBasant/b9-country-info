@@ -25,7 +25,7 @@ export default function BackBtn() {
 }
 
 const styleLeftArrow= {
-  arrowContainer: 'w-20 cursor-pointer flex justify-center items-center gap-2 justify-content bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements mt-2 px-4 py-2 shadow rounded',
+  arrowContainer: 'w-20 cursor-pointer flex justify-center items-center gap-2 justify-content bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements mt-2 px-4 py-2 shadow-colorShadow rounded',
   leftArrow: 'text-baseSize text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText',
   backText: 'text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText',
 }
