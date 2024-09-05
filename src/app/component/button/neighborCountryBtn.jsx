@@ -38,5 +38,5 @@ export default function NeighborCountryBtn({ cca3 }) {
 }
 
 const neighborCountryStyle = {
-  neighborCountryBtn: 'min-w-2 w-full bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText px-5 py-2 shadow rounded',
+  neighborCountryBtn: 'w-full min-w-15 px-5 py-2 text-nowrap bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText shadow rounded',
 };

@@ -1,9 +1,6 @@
 
 'use client'
 
-// import { useSelector, useDispatch } from 'react-redux';
-
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons';
 
@@ -25,7 +22,7 @@ export default function BackBtn() {
 }
 
 const styleLeftArrow= {
-  arrowContainer: 'w-20 cursor-pointer flex justify-center items-center gap-2 justify-content bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements mt-2 px-4 py-2 shadow-colorShadow rounded',
-  leftArrow: 'text-baseSize text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText',
-  backText: 'text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText',
+  arrowContainer: 'w-52 md:w-30 lg:w-28 px-4 md:px-3 py-5 md:py-3 cursor-pointer flex justify-center items-center gap-5 md:gap-3 bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements shadow-colorShadow rounded',
+  leftArrow: 'text-3xl md:text-lg text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText',
+  backText: 'text-xl md:text-sm text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText',
 }

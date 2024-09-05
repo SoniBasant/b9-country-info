@@ -22,34 +22,18 @@ export default function ThemeBtn() {
 		}
 	}, [isDarkMode]);
 	return (
-		// <>
-		// 	{
-		// 		isDarkMode ? (
-
-		// 			<FontAwesomeIcon 
-		// 				icon={faRegularMoon} 
-		// 				className={styleThemeBtn.themeIconRegular}
-		// 				onClick={() => dispatch(toggleTheme())}
-		// 			/>
-		// 		) : (
-
-		// 			<FontAwesomeIcon 
-		// 				icon={ faSolidMoon} 
-		// 				className={styleThemeBtn.themeIconSolid}
-		// 				onClick={() => dispatch(toggleTheme())}
-		// 			/>
-		// 		)
-		// 	}
-		// </>
-		<FontAwesomeIcon
-      icon={isDarkMode ? faRegularMoon : faSolidMoon}
-      className={isDarkMode ? styleThemeBtn.themeIconRegular : styleThemeBtn.themeIconSolid}
-      onClick={() => dispatch(toggleTheme())}
-    />
+		<div className={styleThemeBtn.themeIconContainer}>
+			<FontAwesomeIcon
+				icon={isDarkMode ? faRegularMoon : faSolidMoon}
+				className={isDarkMode ? styleThemeBtn.themeIconRegular : styleThemeBtn.themeIconSolid}
+				onClick={() => dispatch(toggleTheme())}
+			/>
+		</div>
 	)
 }
 
 const styleThemeBtn = {
+	themeIconContainer: 'w-6 h-6 rounded-full flex items-center justify-center hover:bg-Grey ',
   themeIconSolid: 'text-baseSize text-WhiteDarkModeTextnLightModeElements cursor-pointer',
 	themeIconRegular: 'text-baseSize text-VeryDarkBlueLightModeText cursor-pointer',
 }
