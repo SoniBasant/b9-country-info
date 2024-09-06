@@ -36,7 +36,7 @@ export default function SearchBar() {
 }
 
 const styleSearch= {
-  searchContainer: 'w-full max-w-[250px] flex gap-3 justify-start items-center bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements p-3 rounded',
+  searchContainer: 'w-full max-w-[250px] flex gap-3 justify-start items-center bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements p-3 shadow rounded',
   searchIconSolid: 'text-baseSize text-WhiteDarkModeTextnLightModeElements dark:text-Grey',
   searchInputStyle: 'placeholder-VeryLightGrayLightModeBackground dark:placeholder-DarkGrayLightModeInput bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements text-WhiteDarkModeTextnLightModeElements dark:text-DarkBlueDarkModeElements text-belowSize outline-none',
 }
