@@ -18,7 +18,7 @@ export default function Header() {
 }
 
 const headerStyle = {
-  headerContainer: 'z-10 py-4 md:py-7 px-5 sm:px-8 md:px-14 xl:px-20 w-full flex flex-row items-center justify-between text-sm bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements shadow',
+  headerContainer: 'z-10 py-4 md:py-7 px-5 sm:px-8 md:px-20 xl:px-20 w-full flex flex-row items-center justify-between text-sm bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements shadow',
   themeContainer: 'flex flex-row gap-0 sm:gap-1 md:gap-2 items-center justify-center',
 
   headingText: 'text-baseSize md:text-xl font-bold text-WhiteDarkModeTextnLightModeElements dark:text-VeryDarkBlueLightModeText',
