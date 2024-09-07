@@ -23,7 +23,6 @@ export default function SearchBar() {
   // handle input change
   const handleChange = (e) => {
     setInput(e.target.value); //update local state
-    // dispatch(setSearchTerm(e.target.value)) //dispatch action to redux
   }
 
   // dispatch action when debounced input changes
@@ -34,12 +33,12 @@ export default function SearchBar() {
   }, [debouncedInput, dispatch]);
 
   return(
-    <div className={styleSearch.searchContainer}>
-      <FontAwesomeIcon icon={faMagnifyingGlass} className={styleSearch.searchIconSolid} />
+    <div className={searchBarStyle.searchContainer}>
+      <FontAwesomeIcon icon={faMagnifyingGlass} className={searchBarStyle.searchIconSolid} />
       <input 
         type="text" 
         placeholder='Search for a country...' 
-        className={styleSearch.searchInputStyle}
+        className={searchBarStyle.searchInputStyle}
         value={input}
         onChange={handleChange}
         />
@@ -47,7 +46,7 @@ export default function SearchBar() {
   )
 }
 
-const styleSearch= {
+const searchBarStyle= {
   searchContainer: 'w-full max-w-[250px] flex gap-3 justify-start items-center bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements p-3 shadow rounded',
   searchIconSolid: 'text-baseSize text-WhiteDarkModeTextnLightModeElements dark:text-Grey',
   searchInputStyle: 'placeholder-VeryLightGrayLightModeBackground dark:placeholder-DarkGrayLightModeInput bg-DarkBlueDarkModeElements dark:bg-WhiteDarkModeTextnLightModeElements text-WhiteDarkModeTextnLightModeElements dark:text-DarkBlueDarkModeElements text-belowSize outline-none',
