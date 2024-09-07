@@ -1,12 +1,13 @@
 "use client"
 
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { setSearchTerm } from '@/redux/slices/countrySlice';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
+import useDebounce from '@/hooks/useDebounce';
 
 export default function SearchBar() {
   // redux dispatch
@@ -15,11 +16,22 @@ export default function SearchBar() {
   // local state for the input
   const [input, setInput] = useState('');
 
+  // inputs for debouncing function
+  // useDebounce need two inputs; value of input and delay
+  const debouncedInput = useDebounce(input, 500);
+
   // handle input change
   const handleChange = (e) => {
     setInput(e.target.value); //update local state
-    dispatch(setSearchTerm(e.target.value)) //dispatch action to redux
+    // dispatch(setSearchTerm(e.target.value)) //dispatch action to redux
   }
+
+  // dispatch action when debounced input changes
+  useEffect(() => {
+    if(debouncedInput) {
+      dispatch(setSearchTerm(debouncedInput));
+    }
+  }, [debouncedInput, dispatch]);
 
   return(
     <div className={styleSearch.searchContainer}>
