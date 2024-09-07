@@ -26,7 +26,12 @@ module.exports = {
         Grey: 'hsl(231, 7%, 60%)',
         White: 'hsl(0, 0%, 100%)',
         red: 'hsl(0, 97%, 50%)',
+        
       },
+      // backgroundImage: {
+      //   bgDark: 'linear-gradient(to bottom, #2B3945, #202c37)',
+      //   bgLight: 'linear-gradient(to bottom, #FFFFFF, #fafafa)',
+      // },
       // fontFamily: {
       //   sans: ['Nunito Sans', 'sans-serif']
       // },

@@ -1,6 +1,6 @@
 "use client"
 
-import { Nunito_Sans } from "next/font/google";
+import { Nunito_Sans } from 'next/font/google';
 import "./globals.css";
 
 // for icons
@@ -22,13 +22,16 @@ import { Provider } from 'react-redux';
 import store from '../redux/store';
 
 const nunitoSans = Nunito_Sans({ 
-  subsets: ["latin"],
+  subsets: ['latin'],
   weight: ['400', '700'], 
+  display: 'swap', 
+  adjustFontFallback: false 
 });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {/* <body className={`${nunitoSans.className} bg-bgDark dark:bg-bgLight`}> */}
       <body className={nunitoSans.className}>
       <Provider store={store}>
       <main className="flex min-h-screen flex-col bg-VeryDarkBlueDarkModeBackground dark:bg-VeryLightGrayLightModeBackground">

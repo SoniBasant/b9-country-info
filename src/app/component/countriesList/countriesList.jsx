@@ -22,7 +22,7 @@ export default function CountriesList() {
   if (error) return <p>Error: {error}</p>;
 
   return ( 
-    <div className={HomePageCountryCardsStyle.HomePageContainer}>
+    <div className={homePageCountryCardsStyle.homePageContainer}>
       {filteredCountries.map((country) => (
         <Link key={country.cca2} href={`/countries/${country.cca2}`}>
           <CountryCardHomePage country={country}/>
@@ -32,6 +32,6 @@ export default function CountriesList() {
   );
 }
 
-const HomePageCountryCardsStyle = {
-  HomePageContainer: 'grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-[60px] md:grid-cols-3 md:gap-x-[60px] md:gap-y-[80px] xl:grid-cols-4',
+const homePageCountryCardsStyle = {
+  homePageContainer: 'grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-[60px] md:grid-cols-3 md:gap-x-[60px] md:gap-y-[80px] xl:grid-cols-4',
 }

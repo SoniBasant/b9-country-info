@@ -1,9 +1,8 @@
 // country card in home page
-
 export default function CountryCardHomePage({ country }) {
   return (
     <div className={HomePageCardStyle.cardContainer}>
-      <div class={HomePageCardStyle.cardImageContainer}>
+      <div className={HomePageCardStyle.cardImageContainer}>
         <img src={country.flags.png} alt={`${country.name.common} flag`} className={HomePageCardStyle.cardImage} />
       </div> 
         <h2 className={HomePageCardStyle.cardHeading}>{country.name.common}</h2>
