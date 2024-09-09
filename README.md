@@ -2,6 +2,8 @@
 
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+This project is in **ADVANCED** category.
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -43,9 +45,12 @@ This project is responsive at screens from Desktop (1440px) to Mobile S (320px).
 
 **Snapshot at screen width 1040px >** `Detail page` of India in the light theme. You can see basic information about India like population, region, capital, currency and more.
 
+Also, you can see neighbor countries name inside buttons. If you click them, you can see detail page on clicked country.
+
 ![](./design/country-info-snap-3.png)
 
-Also, you can see neighbor countries name inside buttons. If you click them, you can see detail page on clicked country.
+You can find more snapshots in `design` folder. Original designs are also there in that folder.
+
 
 ### Links
 
@@ -63,7 +68,7 @@ You will see a link in localhost, like "http:// localhost:3000", open it with yo
 
 ## My process
 
-As I don't have `figma` file of design. So the dimensions and spacing is based on my judgement. My project may/ may not be same as the design.
+As I don't have `figma` file of design. So the dimensions and spacing is based on my judgement. My project may/ may not be same as the design. So please kind with me on that criteria. 🤖🤖
 
 ### Built with
 
