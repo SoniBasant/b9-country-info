@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# REST Countries API with color theme switcher
 
-## Getting Started
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### The challenge
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Users should be able to:
 
-## Learn More
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode
 
-To learn more about Next.js, take a look at the following resources:
+This project is responsive at screens from Desktop (1440px) to Mobile S (320px).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Screenshot
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Snapshot at screen width 1440px >** `Home page` with some country cards in dark theme.
 
-## Deploy on Vercel
+![](./design/country-info-snap-1.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Snapshot at screen width 1040px >** Using search bar, find the India card, it shows 2 countries which has "india" in their name. You can also see dropdown menu. Theme is light.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![](./design/country-info-snap-2.png)
+
+**Snapshot at screen width 1040px >** `Detail page` of India in the light theme. You can see basic information about India like population, region, capital, currency and more.
+
+![](./design/country-info-snap-3.png)
+
+Also, you can see neighbor countries name inside buttons. If you click them, you can see detail page on clicked country.
+
+### Links
+
+- Live Site URL: [Live Link]()
+
+- Solution URL: [Source Code](https://github.com/SoniBasant/b9-country-info) 
+
+If you want to pull the project code, you can do it from above source code.
+
+After that, First, run the development server by typing >
+
+`npm run dev`
+
+You will see a link in localhost, like "http:// localhost:3000", open it with your browser to see the result.
+
+## My process
+
+As I don't have `figma` file of design. So the dimensions and spacing is based on my judgement. My project may/ may not be same as the design.
+
+### Built with
+
+- **React** - JS library
+- **create-next-app** - For Project development
+- **Next.js** - React framework
+- **Redux JS** - State Management
+- **Redux Thunk** - Middleware for side-effect (API)
+- **Axios** - Promise Based HTTP client
+- **Tailwind CSS** - CSS framework for Utility Based classes
+- **headless UI** - For Dropdown Menu
+- **Fontawesome Icon** - For Icons
+- Mobile-first workflow
+- **Vercel** - For deployment
+
+### What I learned
+
+This is my first `NextJS` project. Not just NextJS, I work with some other tech stack first time.
+
+Below is the list of my **first-time** tech stack-
+
+- NextJS
+- App Router
+- Redux JS
+- Redux Thunk
+- Axios
+
+I used a component collection of UI, `headless UI`. I used it for dropdown menu for region filtering.
+
+Also,
+
+I used `object based fontawesome icons` which provide `individual import` of icon. By using object based method, I import only required icons not the whole library which reduces bundle size.
+
+### Continued development
+
+As this is big project, there is a scope for further development-
+
+- Home page is taking much time to load. Need to minimise it by some optimization.
+- After search, there should be an option to go back to home page.
+- Home page render all country card at once. Need to reduce it to save initial rendering load.
+- Fine tune spacing (padding, margin, height, width).
+- Different optimization techniques > Memoization, caching, fuse.js etc.
+
+Also, your feedback and suggestions are welcome. 🤗 🙏🏻
+
+### Useful resources
+
+- [REST Country API](https://restcountries.com/) - REST API for all countries
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Redux JS](https://redux.js.org/) - State Management
+- [Redux Thunk](https://redux.js.org/usage/writing-logic-thunks) - Middleware for side-effect (API)
+- [Axios](https://axios-http.com/docs/intro) - Promise Based HTTP client
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework for Utility Based classes
+- [headless UI](https://headlessui.com/) - For Dropdown Menu
+- [Fontawesome Icon](https://fontawesome.com/) - For Icons
+- [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) - For project deployment
+- ChatGPT - For all my queries and guidance
+
+## Author
+
+Basant Soni 👨‍💻
+
+- GitHub - [@SoniBasant](https://github.com/SoniBasant)
+
+- Frontend Mentor - [@SoniBasant](https://www.frontendmentor.io/profile/SoniBasant)
+- CodePen - [@SoniBasant](https://codepen.io/sonibasant)
+- Hashnode - [@SoniBasant](https://sonibasant.hashnode.dev/)
+
+
+## Acknowledgments
+
+Appreciation for the person who is managing REST Country API. Without that API, this project is not possible. 🙏🏻🙏🏻
+
+This is the [`Link`](https://restcountries.com/) to REST Country API.
