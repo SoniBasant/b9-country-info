@@ -54,7 +54,7 @@ You can find more snapshots in `design` folder. Original designs are also there 
 
 ### Links
 
-- Live Site URL: [Live Link](https://b9-country-info.vercel.app/)
+- Live Site URL: [Live Link](https://sonibasant-b9-country-info.vercel.app/)
 
 - Solution URL: [Source Code](https://github.com/SoniBasant/b9-country-info) 
 
