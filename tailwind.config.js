@@ -18,15 +18,14 @@ module.exports = {
     extend: {
       colors: {
         DarkBlueDarkModeElements: 'hsl(209, 23%, 22%)',
-  VeryDarkBlueDarkModeBackground: 'hsl(207, 26%, 17%)',
-  VeryDarkBlueLightModeText: 'hsl(200, 15%, 8%)',
-  DarkGrayLightModeInput: 'hsl(0, 0%, 52%)',
-  VeryLightGrayLightModeBackground: 'hsl(0, 0%, 98%)',
-  WhiteDarkModeTextnLightModeElements: 'hsl(0, 0%, 100%)',
+        VeryDarkBlueDarkModeBackground: 'hsl(207, 26%, 17%)',
+        VeryDarkBlueLightModeText: 'hsl(200, 15%, 8%)',
+        DarkGrayLightModeInput: 'hsl(0, 0%, 52%)',
+        VeryLightGrayLightModeBackground: 'hsl(0, 0%, 98%)',
+        WhiteDarkModeTextnLightModeElements: 'hsl(0, 0%, 100%)',
         Grey: 'hsl(231, 7%, 60%)',
         White: 'hsl(0, 0%, 100%)',
         red: 'hsl(0, 97%, 50%)',
-        
       },
       // backgroundImage: {
       //   bgDark: 'linear-gradient(to bottom, #2B3945, #202c37)',

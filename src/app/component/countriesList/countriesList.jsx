@@ -1,18 +1,20 @@
 "use client"
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCountries } from '@/redux/slices/countrySlice';
+// import { FixedSizeGrid as Grid} from 'react-window';
+import Link from 'next/link';
 
+import { fetchCountries } from '@/redux/slices/countrySlice';
 import CountryCardHomePage from '../countryCard/countryCardHomePage';
 
-import Link from 'next/link';
 
 export default function CountriesList() {
   const dispatch = useDispatch();
   // use 'filteredCountries' from the Redux store
   const { filteredCountries, loading, error } = useSelector((state) => state.country);
 
+  
   // Fetch countries when the component mounts
   useEffect(() => {
     dispatch(fetchCountries());
