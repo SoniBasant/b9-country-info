@@ -35,18 +35,15 @@ This project is responsive at screens from Desktop (1440px) to Mobile S (320px).
 
 ### Screenshot
 
-**Snapshot at screen width 1440px >** `Home page` with some country cards in dark theme.
-
+**Snapshot at screen width 1440px >** `Home page` with some country cards in light theme.
 ![](./design/country-info-snap-1.png)
 
-**Snapshot at screen width 1040px >** Using search bar, find the India card, it shows 2 countries which has "india" in their name. You can also see dropdown menu. Theme is light.
-
+**Snapshot at screen width 1040px >** Using search bar, find the India card, it shows 2 countries which has "india" in their name. You can also see dropdown menu. Theme is dark.
 ![](./design/country-info-snap-2.png)
 
-**Snapshot at screen width 1040px >** `Detail page` of India in the light theme. You can see basic information about India like population, region, capital, currency and more.
+**Snapshot at screen width 1040px >** `Detail page` of India in the dark theme. You can see basic information about India like population, region, capital, currency and more.
 
 Also, you can see neighbor countries name inside buttons. If you click them, you can see detail page on clicked country.
-
 ![](./design/country-info-snap-3.png)
 
 You can find more snapshots in `design` folder. Original designs are also there in that folder.
@@ -110,7 +107,7 @@ As this is big project, there is a scope for further development-
 - Home page is taking some time to load. Need to minimise it by some optimization.
 - After search, there should be an option to go back to home page.
 - Home page render all country card at once. Need to reduce it to save initial rendering load.
-- Different optimization techniques > Memoization, caching, fuse.js etc.
+- Different optimization techniques > Lazy-loading, Memoization, caching, fuse.js etc.
 - Back to top button
 - Internationalization for languages
 - If needed > central API calls
