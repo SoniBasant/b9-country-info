@@ -86,31 +86,35 @@ As I don't have `figma` file of design. So the dimensions and spacing is based o
 
 ### What I learned
 
-This is my first `NextJS` project. Not just NextJS, I work with some other tech stack first time.
-
+- This is my first `NextJS` project. Not just NextJS, I work with some other tech stack first time.
 Below is the list of my **first-time** tech stack-
 
-- NextJS
-- App Router
-- Redux JS
-- Redux Thunk
-- Axios
+  - NextJS
+  - App Router
+  - Redux JS
+  - Redux Thunk
+  - Axios
 
-I used a component collection of UI, `headless UI`. I used it for dropdown menu for region filtering.
+- I used a User interface component library, `headless UI` tocreate more advanced and accessible filter dropdowns, such as multi-select for regions, with search and custom styling capabilities.
 
-Also,
-
-I used `object based fontawesome icons` which provide `individual import` of icon. By using object based method, I import only required icons not the whole library which reduces bundle size.
+- Optimization Techniques I learned and used-
+  - **Debouncing**: For search input to reduce the number of API calls triggered by user input, reduce load on server.
+  - **generateStaticParams**: To pre-renders dynamic routes as static pages at build time to improve performance and SEO.
+  - **CSS Tailwind Optimization**: Using Tailwind CSS for utility-first styling and minimizing CSS bundle size.
+  - **object based fontawesome icons**: By using object based method of `individual import`, I import only required icons not the whole library which reduces bundle size.
 
 ### Continued development
 
 As this is big project, there is a scope for further development-
 
-- Home page is taking much time to load. Need to minimise it by some optimization.
+- Home page is taking some time to load. Need to minimise it by some optimization.
 - After search, there should be an option to go back to home page.
 - Home page render all country card at once. Need to reduce it to save initial rendering load.
-- Fine tune spacing (padding, margin, height, width).
 - Different optimization techniques > Memoization, caching, fuse.js etc.
+- Back to top button
+- Internationalization for languages
+- If needed > central API calls
+- If needed > Data visualization libraries for different data like population, languages, number of neighbors etc.
 
 Also, your feedback and suggestions are welcome. 🤗 🙏🏻
 

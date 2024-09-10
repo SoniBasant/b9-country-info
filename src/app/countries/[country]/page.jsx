@@ -1,14 +1,5 @@
 // to handle dynamic routing based on country name or code
 
-// generateStaticParams() > to define the dynamic 
-// routes that should be statically generated at build 
-// time.
-
-// Used in the Next.js App Router only. It helps Next.js know which dynamic paths to 
-// pre-render as static pages, improving performance 
-// and enabling static generation for dynamic routes.
-
-
 import axios from 'axios';
 
 import CountryInfoDetailPage from '@/app/component/countryCard/countryInfoDetailPage'
