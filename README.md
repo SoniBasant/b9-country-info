@@ -87,7 +87,7 @@ As I don't have `figma` file of design. So the dimensions and spacing is based o
 Below is the list of my **first-time** tech stack-
 
   - NextJS
-  - App Router
+  - App Router > Static rendering (SSG)
   - Redux JS
   - Redux Thunk
   - Axios
@@ -95,8 +95,8 @@ Below is the list of my **first-time** tech stack-
 - I used a User interface component library, `headless UI` tocreate more advanced and accessible filter dropdowns, such as multi-select for regions, with search and custom styling capabilities.
 
 - Optimization Techniques I learned and used-
+  - **generateStaticParams**: For static rendering, **SSG**(Static Site Generation), to pre-renders dynamic routes as static pages at build time to improve performance and SEO.
   - **Debouncing**: For search input to reduce the number of API calls triggered by user input, reduce load on server.
-  - **generateStaticParams**: To pre-renders dynamic routes as static pages at build time to improve performance and SEO.
   - **CSS Tailwind Optimization**: Using Tailwind CSS for utility-first styling and minimizing CSS bundle size.
   - **object based fontawesome icons**: By using object based method of `individual import`, I import only required icons not the whole library which reduces bundle size.
 
